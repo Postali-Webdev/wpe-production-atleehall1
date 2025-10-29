@@ -1,0 +1,239 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+footer {
+    position: relative;
+    z-index: 0;
+}
+
+.footer {    
+    position: relative;
+    z-index: 3;
+    
+    p,
+    ul li a {
+        color:$white;
+        line-height: 170%;
+        font-size: 16px;
+    }
+    
+    strong {
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .spacer-60 {
+        @include respond(phone) {
+            height:30px;
+        }
+    }
+
+    .container {
+        .columns {
+            .footer-cta {
+                background: white;
+                padding: 50px 35px 100px;
+                box-sizing: border-box;
+                position: relative;
+                border:2px solid $ltblue;
+                width: 40%;
+                display: block;
+
+                @include respond(tab-land) {
+                    margin-bottom: 60px;
+                    width: 100%;
+                }
+
+                &::after {
+                    position: absolute;
+                    height: 50px;
+                    width: 100%;
+                    left: 0;
+                    bottom: 0;
+                    background-color: $ltblue;
+                    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+                    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+                    content: "";
+                    transition: 0.2s linear;
+                }
+
+                h3 {
+                    font-family: $sans;
+                    color: $dkblue;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    letter-spacing: 3px;
+                    margin-top:0 !important;
+                    
+                    &::before {
+                        display:none;
+                    }
+                }
+
+                p {
+                    color: $dkblue;
+                }
+
+                @include contact-block;
+
+                .main-contact .contact-block-right p a {
+                    color: $dkblue;
+                }
+
+                p.serif.em {
+                    font-size: 14px !important;
+                    margin-bottom: 0 !important;
+                }
+            }
+
+            .column-66 {
+                width: 55%;
+
+                @include respond(tab-land) {
+                    width:100%;
+                }
+            }
+            
+            .footer-logo {
+                height: auto;
+                width: 250px;
+            }
+            
+            .address-map {
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                max-width: 75%;
+
+                @include respond(desktop) {
+                    max-width: 100%;
+                }
+
+                @include respond(tab-port) {
+                    flex-wrap: wrap;
+                }
+                
+                .address {
+                    max-width: 35%;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+                    white-space: nowrap;
+                    margin-right: 80px;
+
+                    @include respond(tab-port) {
+                        width:100%;
+                        max-width: 100%;
+                    }
+                }
+            
+                .map {
+                    width: 100%;
+
+                    @include respond(tab-port) {
+                        width:100%;
+                        max-width: 100%;
+                        margin-top: 30px;
+                    }
+            
+                    iframe {
+                        max-width: 100%;
+                        height: 180px;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .footer-nav {
+                p {
+                    margin-bottom: 5px;
+                    text-transform: uppercase;
+                    color: $ltblue;
+                    letter-spacing: 2px;
+                    font-weight: 700;
+                }
+
+                #menu-footer-menu {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+
+                    @include respond(tab-port) {
+                        display:block;
+                    }
+            
+                    li {
+                        margin-left: 0;
+
+                        &:not(:last-child) {
+                            margin-right: 50px;
+
+                            @include respond(desktop) {
+                                margin-right: 20px;
+                            }
+                        }
+        
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            a.social-link {
+                span {
+                    margin-right: 10px;
+                    font-size: 25px;
+                    border-radius: 50%;
+                    transition: $trans;
+                }
+            }
+
+            .footer-social {
+                display:flex;
+                width: 15%;
+
+                @include respond(tab-port) {
+                    width:100%;
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .footer-utility {
+                width:80%;
+
+                @include respond(tab-port) {
+                    width:100%;
+                    max-width: 100%;
+                }
+
+                .utility {
+                    margin-bottom: 15px;
+                    
+                    a {
+                        font-size: 14px;
+                        text-decoration: underline;
+                        margin-right: 20px;
+                        color:$white;
+
+                        @include respond(phone) {
+                            display:block;
+                            margin:15px 0;
+                        }
+                    }
+                }
+
+                .disclaimer {
+                    @include respond(phone) {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

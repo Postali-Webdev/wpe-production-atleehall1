@@ -1,0 +1,50 @@
+{
+    "key": "group_66574e308aebc",
+    "title": "Shortcodes",
+    "fields": [
+        {
+            "key": "field_66574e304912d",
+            "label": "Shortcodes",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<strong>YouTube Video Embeds<\/strong>\r\nTo embed youtube videos, simply copy and paste the shortcode below. Make sure to update the 'VIDEO_ID' and 'ADD TITLE' fields.\r\n\r\n[Youtube video_id=\"VIDEO_ID\" title=\"ADD TITLE\"]",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1716997848
+}

@@ -1,0 +1,203 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+body, h1, h2, h3, h4, h5, h6, p, a, ul {
+    // color: $body-text-color;
+} 
+p, a, ul, ol {
+
+}
+ul li, ol li {
+    margin: 0 0 0 20px;
+    font-size: 18px;
+}
+dl, blockquote, img {
+
+}
+
+a {
+    text-decoration:none;
+    transition:$trans;
+    &:hover {
+        // color:$lt-red;
+        text-decoration:none;
+    }
+}
+
+.btn {
+    display:inline-block;
+    padding:15px 35px;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition:$trans;
+    font-size: 15px;
+    text-decoration: none !important;
+    background: $ltblue;
+    background: linear-gradient(90deg, $ltblue 0%, #fff 100%);
+    border: 2px solid $dkblue;
+    color:$dkblue;
+    
+    &:hover {
+        text-decoration: underline;
+        border: 2px solid $white;
+        color:$dkblue;
+    }
+}
+
+.blocked {
+    font-size: 17px !important;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700 !important;
+    color:$white !important;
+    padding:5px 10px;
+    background-color: $dkblue;
+    letter-spacing: 1px;
+    margin-top: 0 !important;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+
+    &::before {
+        display:none;
+    }
+}
+
+p {
+    line-height: 180%;
+    margin-bottom:30px;
+    margin-top: 0;
+
+    @include respond(phone) {
+        line-height: 160%;
+    }
+
+    &.small {
+        font-size: 14px !important;
+    }
+
+    &.large {
+        font-size: 22px;
+    }
+
+    &.serif {
+        font-family: $serif !important;
+        font-size: 1rem !important;
+        line-height: 160%;
+        color: #58595A;
+
+        @include respond(phone) {
+            font-size: 1rem !important;
+        }
+    }
+
+    &.em {
+        font-style: italic;
+    }
+    
+    a {
+        font-family: inherit;
+        color:inherit;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: inherit;
+        }
+    }
+
+    &.caps {
+        text-transform: uppercase;
+    }
+
+    &.blue {
+        color:$ltblue !important;
+    }
+
+    &.spaced {
+        letter-spacing: 2px;
+    }
+}
+
+h2, h3, h4 {
+    line-height: 120%;
+}
+
+h2 {
+    margin: 50px 0 20px !important;
+    display:block;
+    font-size: 48px;
+
+    @include respond(phone) {
+        font-size: 2rem !important;
+    }
+}
+
+h3 {
+    margin: 60px 0 20px !important;
+    display:block;
+    text-transform:uppercase; 
+    font-weight:300;
+
+    strong {
+        font-weight: 400 !important;
+    }
+
+    &::before {
+        width: 30px;
+        display: inline-block;
+        position: relative;
+        content: "";
+        height: 5px;
+        background: $ltblue;
+        top: -10px;
+        margin-right: 15px;
+
+        @include respond(phone) {
+            width:20px;
+        }
+    }
+
+    @include respond(phone) {
+        font-size: 1.5rem !important;
+    }
+}
+
+h4 {
+    margin: 30px 0 20px !important;
+    display:block;
+    font-size: 22px;
+}
+
+.body-container {
+    ul li, 
+    ul li a,
+    ol li, 
+    ol li a {
+        font-size:16px;
+        line-height: 30px;
+        margin-top: 0;
+        font-family: $sans;
+        color: inherit;
+        margin:0 !important;
+        color:#0f1d43;
+    }
+
+    ul,
+    ol {
+        margin-bottom:30px;
+
+        li {
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

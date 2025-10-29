@@ -1,0 +1,133 @@
+.gform_wrapper {
+    padding: 0px 50px 35px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    background:$dkblue;
+
+    @include respond(tab-port) {
+        padding:30px 30px 20px;
+    }
+
+    .gfield {
+        input {
+            padding:12px !important;
+        }
+    }
+
+    label {
+        color:$white;
+        text-transform: none !important;
+        font-size: 14px !important;
+        font-weight: normal;
+    }
+
+    .gfield_required {
+        color: $white !important;
+    }
+
+    p.gform_required_legend {
+        color:$white;
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        text-transform: none !important;
+        font-weight: bold !important;
+        border:none;
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+        transition:$trans;
+        white-space: break-spaces;
+        line-height: 130% !important;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+    }
+}
+
+.gchoice {
+    margin: 10px;
+  }
+  
+  .gchoice input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+  
+  .gchoice label {
+      display: inline-block;
+      padding: 10px 20px !important;
+      font-family: $sans !important;
+      font-size: 16px !important;
+      border: none !important;
+      border-radius: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      text-align: center;
+      color: $dkblue;
+      background: white;
+      margin-bottom: 2px !important;
+  }
+  
+  .gchoice label:hover {
+        background-color: $ltblue;
+  }
+  
+  .gchoice input[type="radio"]:focus + label {
+        background-color: $ltblue;
+  }
+  
+  .gchoice input[type="radio"]:checked + label {
+      background-color: $ltblue;
+  }
+  
+.gform_wrapper input[type=submit] {
+    font-size: 16px !important;
+    color:$dkblue;
+    width: 100% !important;
+    margin: 0 16px 0 0;
+    text-transform: uppercase !important;
+    background: $ltblue;
+    width: 100%;
+
+    &:hover {
+        background:$white;
+    }
+}
+
+.gform_wrapper .top_label li ul.gfield_radio {
+    width: 100% !important;
+}
+
+.gform_legacy_markup_wrapper ul.gform_fields li.gfield {
+    padding-right: 0 !important;
+}
+
+.gform_legacy_markup_wrapper .top_label .gfield_label {
+    margin-top: 20px;
+}
+
+@include respond(desktop) {
+    .gform_wrapper li.gfield[class*=col][class*=gf_list_] ul.gfield_radio li {
+        width:50%;
+    }
+}
+
+@include respond(tab-land) {
+    .gform_wrapper li.gfield[class*=col][class*=gf_list_] ul.gfield_radio li {
+        width:100%;
+    }
+}
+
+/* validation errors */
+.gform_legacy_markup_wrapper .gform_validation_errors { border: 1px solid #b3eaea !important; }
+.gform_legacy_markup_wrapper .gform_validation_errors>h2,
+.gform_legacy_markup_wrapper .gfield_error .gfield_label,
+.gform_legacy_markup_wrapper .validation_message { color:#b3eaea !important; }
+.gform_legacy_markup_wrapper li.gfield.gfield_error, .gform_legacy_markup_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    background-color: rgba(255, 223, 224, .15) !important;
+    border-top: 1px solid #b3eaea !important;
+    border-bottom: 1px solid #b3eaea !important;
+}
