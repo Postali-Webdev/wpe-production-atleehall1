@@ -64,6 +64,7 @@
                     <div class="spacer-60"></div>
                         <div class="footer-nav">
                             <p><strong>Site Navigation</strong></p>
+                            <nav>
                             <?php
                                 $args = array(
                                     'container' => false,
@@ -71,6 +72,7 @@
                                 );
                                 wp_nav_menu( $args );
                             ?>	
+                            </nav>
                         </div>
                     <div class="spacer-15"></div>
                     <div class="footer-utility">
